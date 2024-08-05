@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="./jquery/jquery-3.7.1.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+                         <!-- DOM ID NAME
+    <p id="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <button  onclick="n=butt()">button</button>
+                              DOM CLASS NAME
+    <button class=" default red" onclick="red()">red</button>
+    <button class=" default blue" onclick="blue()"> blue</button>
+    <button class=" default green" onclick="green()"> green</button>
+    <button class=" default reset" onclick="reset()"> reset</button>
+                             DOM TAG NAME
+    <p class="one">Antony</p>
+    <p class="two">Antony</p>
+    <p class="three">Antony</p>
+    <p class="four">Antony</p>
+                           DOM QUERYSELECTOR
+    <div class="one1">
+        <p>antony</p>
+    </div>
+                              DOM QUERYSELECTOR ALL
+        
+        <p class="one">Antony</p>
+        <p class="two">Antony</p>
+        <p class="three">Antony</p>
+        <p class="four">Antony</p> -->
+        
+        
+                                    <!-- adding and removing element -->
+            <!-- <p id="ad"></p>
+            <button onclick="add()">add</button>
+            <button onclick="remove()">revome</button>                  
+            <div id="add"></div> -->
+                                      <!-- dom events mouse -->
+                                            
+            <!-- <div class="sq" ondblclick="two()" onclick="one()" onmouseover="three()" onmouseout="four()" onmousemove="five()" onmousewheel="six()">
+
+
+            </div> -->
+
+
+
+           <!-- <div class="box">Animate </div>
+           <p><a href="https://jquery.com/download/" id="welcome">welcome</a></p>
+           <button>click me</button> -->
+
+
+    <script>
+
+
+                                                 //Array
+
+        // 1.Convert array into object
+var arr=[1,2,3,4,5,6];
+var obj={}
+for(var i=0;i<arr.length;i++){
+    obj[arr[i]]=arr[i];
+}
+console.log("Convert array into object : ",obj);
+
+// 2.removing array item by index
+var arr1=['a','b','c','d','e','f'];
+arr1.splice(3,1);
+console.log("Removing array item by index : ",arr1);
+
+// 3.Insert item at specific position
+const arr2=['anto','bond','chandar','david','billa','funny'];
+arr2.splice(4, 0, "g");
+console.log("Insert item at specific position : ",arr2.join());
+
+//4.Sorting array with complex object
+const arr3 = [
+    { name: 'subish', age: 35 },
+    { name: 'anto', age: 20 },
+    { name: 'kappa', age: 30 },
+    { name: 'kicha', age: 25 }
+];
+arr3.sort((a, b) => a.age - b.age);
+console.log("Sorting array with complex object : ", arr3);
+
+//.5 Longest string in an array
+const arr4=["anto","subish","sam","Kicha","guhan","arunesh","barath"]
+let maxel=arr4[0].length;
+for(var j=0;j<arr4.length;j++)
+{
+if(arr4[j].length>maxel)
+    {
+    maxel=arr4[j].length;
+    var idx=j;
+    }
+}
+console.log("Longest string in an array : ",arr4[idx])
+
+
+
+
+
+
+        //                                                    // animate
+        // $(document).ready(function() {
+        //     $("button").click(function() {
+        //         $(".box").animate({left:'500px'});
+        //     });
+        // });
+        //                                             //attribute
+
+
+        //     $(document).ready(function() {
+        //     $("button").click(function() {
+        //        alert($("#welcome").attr("href"));
+        //     });
+        // });
+
+                                           //Promisee
+        
+        // let promise=new promise((resolve,reject) => {
+        //     let success=true;
+        //     if(success){
+        //         resolve("successfull")
+        //     }
+        //     else{
+        //         reject("failed")
+        //     })
+        //     promise
+        //     .then(result=>{
+        //         console.log("success");
+        //     })
+        //     catch(error=>{
+        //         console.log("failed");
+        //     })
+        //     finally(()=>{
+        //         console.log("compelete");
+        //     })
+        // }
+        
+
+
+
+
+
+
+
+
+
+            // let a="@ $ % # welcome home";
+            // let b=/\w/gm;
+            // console.log(a.match(b));
+
+
+
+
+
+
+//         // 1.intersection of two array
+// let a=[1,2,3,4,5,7,6]
+// let b=[2,4,6,8,10,12,14]
+// let c=[]
+// for(let i=0;i<a.length;i++){
+//     for(let j=0;j<b.length;j++){
+//         if(a[i]==b[j]){
+//             c.push(a[i])
+//         }
+//     }
+// }
+// console.log(c)
+
+// // 2.difference b/w 2 array
+
+// let arr=[1,2,3,4,5,7,6]
+// let arr1=[2,4,6,8,10,12,14]
+// let arr2=arr.filter(x => !arr1.includes(x));
+// arr3=arr1.filter(x => !arr.includes(x));
+// let arr4=arr2.concat(arr3)
+// console.log(arr4)
+
+// // 3.array intersection of two set
+
+// const array1 = [1, 2, 3];
+// const array2 = [2, 3, 4, 5];
+// const farray = array1.filter(value => array2.includes(value));
+// console.log(farray)
+
+// //4.grouping array element
+
+// const arr5 = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
+// const groupedArr = arr5.reduce((acc, current) => {
+//     if (!acc[current]) {
+//         acc[current] = [];
+//     }
+//     acc[current].push(current);
+//     return acc;
+// }, {});
+// console.log(groupedArr);
+
+// //5.array manipulation with slice()
+
+// const arr7 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// arr7.splice(2, 3); 
+// console.log(arr7);
+ 
+
+
+
+                    //                                     //Array
+
+                    //  // comparing two array equality
+
+                    //    let a=[1,2,3];
+                    //    let b=[1,2,3];
+                    //    count=0;
+                    //    if(a.length!=b.length){
+                    //     console.log("false")
+                    //    }
+                    //    else{
+                    //    for(let i=0;i<a.length;i++)
+                    //    {
+                    //      for(let j=0;j<b.length;j++)
+                    //      {
+                         
+                    //       if(a[i]==b[j])
+                    //       count++;
+                    //       }
+                    //    }
+                    //    if(count==a.length)
+                    //    {
+                    //     console.log("true");
+
+                    //    }
+                    //    else{
+                    //     console.log("false");
+                    //    }
+                    // }
+                   
+
+                    // //array to object
+                    // let arr1=["anto","bondu","sam10","kich"]
+                    // let obj={};
+                    // for(let i=0;i<arr1.length;i++){
+                    //     obj[i]=arr1[i];  
+                    // }  
+                    // console.log(obj);
+                    
+                    // //checking array element
+                    // const arra=[27,12,31,98,94]
+                    // console.log(arra.includes(27));
+                    // console.log(arra.some(n=>n%2==0));
+                    // console.log(arra.find(n=>n%2==0));
+
+                   
+
+                    // //Array flattening
+                    //   let nest=[1,[2,[3,[4]]]];
+                    //   let flat=nest.flat(Infinity);
+                    //   console.log(flat);
+
+
+                    //   // array destruction
+
+                    //    let num=["hai","hello","haii","hey"];
+                    //    const[first,second, , fourth]=num;
+                    //    console.log(first);
+                    //    console.log(second);
+                    //    console.log(fourth);
+
+        
+
+
+                    //                                          //searching of Array
+
+                    // //index of
+
+
+                    //  let a=["antony","bond","c","d"];
+                    //  let msg=a.indexOf("c");
+                    //  console.log(msg);
+
+
+                    //  //find()
+
+                    //  let b=["antony","bondu","sam10"];
+                    //  let name=b.find(b=>b.startsWith("s"));
+                    //  console.log(name);
+
+                    //  //filter()
+
+                    //  let n=[5,6,2,4,10];
+                    //  let numg=n.filter(n=>n>5);
+                    //  console.log(numg);
+
+
+                    //  let b1=["antony","bondu","sam"];
+                    //  let b2=b1.filter(b1=>b1.length<5);
+                    //  console.log(b2);
+
+                    //  //mapping
+                    //  let num1=[1,2,3,4,5,6,7,8,9,10];
+                    //  let num2=num1.map((x)=>x*2);
+                    //  console.log(num2);
+
+                    //  let c1=["antony","bondu","sam"];
+                    //  let c2=c1.map((x)=>x.toUpperCase());
+                    //  console.log(c2);
+
+
+      // //1
+      //                  let a=[1,2,3];
+      //                  let b=[1,2,3];
+      //                  count=0;
+      //                  for(let i=0;i<a.length;i++)
+      //                  {
+      //                    for(let j=0;j<b.length;j++)
+      //                    {
+                         
+      //                     if(a[i]==b[j])
+      //                     count++;
+      //                     }
+      //                  }
+      //                  if(count==a.length)
+      //                  {
+      //                   console.log("true");
+
+      //                  }
+      //                  else{
+      //                   console.log("false");
+      //                  }
+
+      //  //2
+
+      //                  let n=100;
+      //                  let sum=0;
+      //                  for(let i=0;i<n;i++){
+      //                   if( i%2!=0)
+      //                  {
+      //                   sum=sum+i;
+      //                  }
+      //                 }
+      //                  console.log(sum);
+
+      //  //3
+      //                  let x=100;
+      //                  let add=0;
+      //                  for(let i=0;i<x;i++){
+      //                   if( i%2==0)
+      //                  {
+      //                   add=add+i;
+      //                  }
+      //                 }
+      //                  console.log(add);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      // let c=100;
+                      // count=0;
+                      // for(let i=0;i<c;i++)
+                      // {
+                      //  if(n%i==0)
+                      //  {
+                      //    count++;
+                      //  }
+                      // }
+                      // if(count==0)
+                      // {
+                      //   console.log("prime")
+                      // }
+                
+
+
+
+
+              //  function one(){
+              //    document.getElementsByClassName("sq")[0].style="background-color:blue;"
+
+              //  }
+              //  function two(){
+              //    document.getElementsByClassName("sq")[0].style="background-color:black;"
+
+              //  }
+              //  function three(){
+              //    document.getElementsByClassName("sq")[0].style="background-color:pink;"
+
+              //  }
+              //  function four(){
+              //    document.getElementsByClassName("sq")[0].style="background-color:red;"
+
+              //  }
+              //  function five(){
+              //    document.getElementsByClassName("sq")[0].style="background-color:green;"
+
+              //  }
+              //  function six(){
+              //    document.getElementsByClassName("sq")[0].style="background-color:orange;"
+
+              //  }
+               
+
+         
+             
+                          
+
+
+
+                                                    //adding and removing element
+        // function add(){
+        //    var a=document.getElementById("add");
+        //    a.innerText="Antony";
+        // }
+        
+        // function remove(){
+        //    var a=document.getElementById("add");
+        //    a.remove();
+        // }
+             
+
+        
+
+    //                                                  //DOM QUERYSELECTOR
+    //       document.querySelector(".one1").style="background-color:black; color:white;"
+
+    //                                                   //DOM QUERY SELECTOR ALL
+        
+            
+
+
+    //                                          //DOM TAG NAME 
+
+    // //    var a=document.getElementsByTagName("p");
+        
+    // //    for(let i=0;i<a.length;i++)
+    // //     a[i].style="background-color:green"
+
+    //                                 //    dom class name
+
+    //     var message=document.getElementsByClassName("default");
+
+    //     function red(){
+    //         document.getElementsByClassName("red")[0].style="background-color: red;"
+    //     }
+    //     function blue(){
+    //         document.getElementsByClassName("blue")[0].style="background-color: blue;"
+    //     }
+    //     function green(){
+    //         document.getElementsByClassName("green")[0].style="background-color: green;"
+    //     }
+    //   function reset(){
+    //     for(let i=0; i<message.length; i++)
+    //       {
+    //       message[i].style="background-color: white;"
+    //       }
+    //   }
+
+
+    //                             //  DOM ID NAME
+    // function butt(){
+    //  document.getElementById("para").style="color: white;background-color:black;"
+    // }
+
+//       //1
+//       const hello=() =>
+//     console.log("Antony");
+//     hello();
+
+//     //2
+
+//   const sum=(a,b) => a+b;
+//      console.log(sum(3,5));
+
+//     //3
+  
+//   const sq=(a) => a*a;
+//      console.log(sq(7));
+
+//       //array intialization & creation
+//       var arr = [1,5,2,3,1,4,2,6,8];
+//         console.log(arr);
+//     //array length
+//         console.log(arr.length);
+//     //array index
+//         console.log("element in 0 index is "+arr[0]);
+//         console.log("element in 1 index is "+arr[1]);
+//     //array manipulation (adding elements)
+//         arr.push(5);
+//         console.log(arr);
+//         arr.unshift(9);
+//         console.log(arr);
+//     //array manipulation(removing elements)
+//         arr.pop();
+//         console.log(arr);
+//         arr.shift();
+//         console.log(arr);
+//     //array searching
+//         console.log(arr.indexOf(4));
+//     //array filtering
+//         let evenNum = arr.filter(arr => arr % 2 == 0);
+//         console.log(evenNum);
+//     //array sorting
+//         arr.sort();
+//         console.log(arr);
+//     //array reverse
+//         arr.reverse();
+//         console.log(arr);
+
+    
+//     // 4
+//     const fl={
+//    fname:"Antony",
+//    lname:" Samy",
+//    name:function(){
+//     console.log(this.fname + this.lname);
+//    }
+//    }
+//    fl.name();
+//   //array maximum and minimum
+//         console.log("Largest Number in the array is "+Math.max(...arr));
+//         console.log("smallest Number in the array is "+Math.min(...arr));
+        
+// //
+//    let z=[1,2,3,4,5];
+//    console.log(z);
+
+//    //
+     
+//    arr.push(6,7);
+//    console.log(arr);
+// arr.unshift(0);
+// console.log(arr);
+// arr.pop();
+// console.log(arr);
+// arr.shift();
+// console.log(arr);
+
+// //
+// console.log(arr.indexOf(4));
+// let lar=(element)=>element>3;
+// console.log(arr.find(lar));
+// console.log(arr.includes(2));
+
+
+
+    </script> 
+    
+
+    
+</body>
+</html>
